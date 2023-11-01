@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+	<head>
+		<title>Order | Wowburger</title>
+		<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+		<link rel="stylesheet" href="../css/style.css"/>
+		
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body class="order">
+		<!-- navigation bar -->
+		<nav class="navbar">
+			<ul>
+				<li><a class="nav-links" href="../index.html">HOME</a></li>
+				<li><a class="nav-links" href="menu.html">MENU</a></li>
+				<li><a class="nav-links" href="order.html">ORDER</a></li>
+			</ul>
+		</nav>
+		<!-- Form -->
+		<div class="container">
+			<form onsubmit="checkDiscount()" action="thankyou.html">
+				<table>
+				
+					<tr class="row">
+						<td class="col-25">
+							<label for="username">Username:</label>
+						</td>
+						<td class="col-75">
+							<input type="text" id="username" name="username" required
+								placeholder="Enter your username">
+						</td>
+					<tr>
+					
+					<tr class="row">
+						<td class="col-25">
+							<label for="password">Password:</label>
+						</td>
+						<td class="col-75">
+							<input type="password" id="password" name="password" minlength="9" maxlength="9" required
+								placeholder="9 characters required">
+						</td>
+					<tr>
+					
+					<tr class="row">
+						<td class="col-25">
+							<label for="burger-size">Burger size:</label>
+						</td>
+						<td class="col-75">
+							<select id="burger-size" name="burger-size" onchange="checkSize(this)">
+								<option value="large">6oz Large - €7.00</option>
+								<option value="extra-large">10oz Extra-Large - €9.00</option>
+								<option value="supersize">16oz Supersize - €17.50</option>
+							</select>
+						</td>
+					<tr>
+					
+					<tr class="row">
+						<td class="col-25">
+							<label for="num-burgers">Number of burgers:</label>
+						</td>
+						<td class="col-75">
+							<input type="number" id="num-burgers" name="num-burgers" min="1" required>
+						</td>
+					<tr>
+					
+					<tr class="row">
+						<td class="col-25">
+							<label for="disc-code">Discount code:</label>
+						</td>
+						<td class="col-75">
+							<input type="text" id="disc-code" name="disc-code">
+						</td>
+					<tr>
+					
+					<tr class="row">
+						<td class="col-25">
+							&nbsp;
+						</td>
+						<td class="col-75">
+							<input type="submit" value="Submit">
+						</td>
+					<tr>
+				</table>
+			</form>
+		</div>
+		<script>
+			
+			// function to show warning		
+			function checkSize($this) {
+				if($this.value == "supersize") {
+					alert("Be careful! The excess consumption of salt and cholesterol raises your risk of developing heart disease.");
+				}
+			}
+						
+			// function to check discount code	
+			function checkDiscount() {
+				var text1 = document.getElementById("disc-code").value;
+				
+				if (text1 == "extracheese") {
+					alert("10% discount applied");
+				}
+				else {
+					alert("Invalid code entered");
+				}
+			}
+		</script>
+	</body>
+</html>

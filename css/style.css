@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS for index.html */
+
+/* wowburger.jpg as the background image */
+body.home {
+    background-image: url("../images/wowburger1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Links */
+.links {
+	color: white;
+	font-family: Arial, Verdana, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Turn links black on hover */
+.links:hover {
+    color: black;
+}
+
+/* Position "ORDER NOW" in the top right corner */
+#order-now {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+/* Put order.jpg on the wowburger.jpg and add shadow */
+#order-online {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1.0;
+    box-shadow: 0 0 20px red;
+}
+
+/* Order.jpg turns transparent on hover */
+#order-online:hover {
+    opacity: 50%;
+}
+
+/* Position "VIEW OUR MENU" in the bottom center */
+#view-menu {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+/* CSS for navigation bar */
+
+/* Remove bullet points and change background color */
+.navbar ul {
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #d20106;
+	position:fixed;
+	z-index:1;
+    width:100%;
+}
+
+/* Made navigation bar responsive) */
+.navbar li {
+	float: left;
+}
+
+/* Links */
+.navbar a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	font-family: Arial, Verdana, sans-serif;
+	text-decoration: none;
+}
+
+/* Cursor hovers over any link background become darker */
+.navbar a:hover {
+	background-color: #790102;
+}
+
+/* CSS for menu.html */
+
+/* Background */
+body.menu {
+    background-color: #edf2f6;
+}
+
+/* Made menu.html row responsive */
+.menu-row {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -45%);
+	width: 85%;
+}
+
+/* Made menu.html columns responsive */
+.menu-column {
+	float: left;
+	width: 33.33%;
+	padding: 2%;
+}
+
+/* Burgers pictures turn transparent on hover */
+.menu-column:hover {
+    opacity: 50%;
+}
+
+/* CSS for order.html */
+
+/* Background */
+body.order {
+    background-color: #edf2f6;
+	background-image: url("../images/background.jpg");
+	background-repeat: repeat;
+}
+
+table {
+	width: 100%;
+	padding: 1%;
+}
+
+input, select {
+	width: 100%;
+	padding: 12px;
+}
+
+input[type=submit] {
+	padding: 10px;
+}
+
+/* Made form Responsive) */
+.container {
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #d20106;
+	float: left;
+	background-color: #ffe401;
+	padding: 15px;
+	width: 60%;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -45%);
+}
+
+/* Labels */
+label {
+	font-family: Arial, Verdana, sans-serif;
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+
+/* Made label column responsive) */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Made input column responsive */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Responsive layout - When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+	.col-25, .col-75, input[type=submit] {
+		width: 100%;
+		margin-top: 0;
+	}
+}
+
+/* CSS for thankyou.html */
+
+/* Thank you message in the center of the screen */
+#order-success {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+	text-align: center;
+}
+
+/* Header1 */
+#order-success h1 {
+	font-family: Arial, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+#order-success img {
+	max-width: 100%;
+	height: auto;
+}
